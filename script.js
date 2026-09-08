@@ -26,32 +26,7 @@ function openProduct(p){
  $("#productModal").classList.add("open");
 }
 function addToCart(id){
-    function showCartNotification() { 
-    const box = document.createElement("div");
-    box.innerHTML = `
-      <div style="
-      position:fixed;
-      top:20px; left:50%;
-      transform:translateX(-50%);
-      background:#1d1d1f; color:white;
-      padding:16px 22px;
-      border-radius:16px;
-      box-shadow:0 10px 35px rgba(0,0,0,.4);
-      z-index:99999;
-      font-family:Arial,sans-serif; 
-      font-size:17px;
-      font-weight:bold;
-      border:1px solid #555;
-    "> 
-      ✓ &nbsp; Товар додано до кошика 
-    </div>
-  `;
-  document.body.appendChild(box);
-    
-  setTimeout(() => { 
-    box.remove(); }
-     2500); 
-  }
+
  const p=products.find(x=>x.id==id); if(!p)return;
  const item=cart.find(x=>x.id==id); item?item.qty++:cart.push({...p,qty:1}); save();
  showCartNotification();
