@@ -28,7 +28,7 @@ function openProduct(p){
 function addToCart(id){
  const p=products.find(x=>x.id==id); if(!p)return;
  const item=cart.find(x=>x.id==id); item?item.qty++:cart.push({...p,qty:1}); save();
- alert("Замовлення додано до кошика ✅");
+ showCartNotification();
 }
 function renderCart(){
  if(!cart.length){$("#cartItems").innerHTML="<p>Кошик порожній.</p>";$("#cartTotal").textContent="0 грн";return}
