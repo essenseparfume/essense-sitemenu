@@ -15,3 +15,15 @@
   .contact-mini{display:none}
   .contacts{grid-template-columns:1fr;padding:45px 5%}
 }
+.contacts h2,
+.contacts p,
+.contact-list a,
+.contact-list strong {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.contact-list span {
+    color: #c9c2b9 !important;
+    font-weight: 600 !important;
+}
