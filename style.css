@@ -41,3 +41,61 @@
     min-width: 150px !important;
   }
 }
+/* ===== НОВИЙ КРАСИВИЙ ФУТЕР ===== */
+
+.footer {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1.2fr !important;
+  align-items: start !important;
+  gap: 35px !important;
+  padding: 55px 5% !important;
+  overflow: hidden !important;
+}
+
+/* ESSENSE */
+.footer > div:first-child {
+  min-width: 0 !important;
+}
+
+/* Посилання Telegram / TikTok */
+.footer a {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+
+/* Блок з телефонами */
+.footer a[href^="tel:"] {
+  display: block !important;
+  white-space: nowrap !important;
+  width: max-content !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+}
+
+/* Щоб телефони були ОДИН ПІД ОДНИМ */
+.footer .phones,
+.footer .contact-phones {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+/* Телефон на маленькому екрані */
+@media (max-width: 700px) {
+  .footer {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 25px 15px !important;
+    padding: 40px 25px !important;
+  }
+
+  .footer > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  .footer a[href^="tel:"] {
+    font-size: 16px !important;
+  }
+}
