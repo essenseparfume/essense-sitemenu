@@ -28,3 +28,9 @@
     font-weight: 600 !important;
 }
 .footer-social a{white-space:nowrap!important}
+.footer-social a[href^="tel:"]{
+white-space:nowrap!important;
+word-break:keep-all!important;
+overflow-wrap:normal!important;
+min-width:max-content!important;
+}
