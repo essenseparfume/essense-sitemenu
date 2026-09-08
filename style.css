@@ -27,4 +27,17 @@
     color: #c9c2b9 !important;
     font-weight: 600 !important;
 }
+@media (max-width: 700px) {
+  .footer {
+    overflow-x: auto !important;
+  }
 
+  .footer a[href^="tel:"] {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    width: auto !important;
+    min-width: 150px !important;
+  }
+}
