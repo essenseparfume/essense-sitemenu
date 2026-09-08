@@ -75,6 +75,12 @@ $("#orderForm").addEventListener("submit",async e=>{
    // the order without the GitHub Pages CORS error.
    await fetch(TG_WEBAPP,{method:"POST",body:data,mode:"no-cors"});
    showCartNotification();
+   function showCartNotification(){
+   const b=document.createElement("div");
+   b.textContent="✓ Товар додано до кошика 🛒";
+   b.style="position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:14px 20px;border-radius:12px;font-weight:bold;z-index:99999;box-shadow:0 5px 20px #0006";
+   document.body.appendChild(b);
+   setTimeout(()=>b.remove(),2500);
    cart=[]; save();
    $("#checkoutModal").classList.remove("open");
    $("#cartDrawer").classList.remove("open");
