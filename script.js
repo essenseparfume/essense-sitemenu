@@ -73,7 +73,7 @@ $("#orderForm").addEventListener("submit",async e=>{
    // Apps Script can redirect its response; no-cors lets the browser submit
    // the order without the GitHub Pages CORS error.
    await fetch(TG_WEBAPP,{method:"POST",body:data,mode:"no-cors"});
-   alert("Замовлення додано ✅\\nДякуємо! Ми зв'яжемося з вами.");
+   showCartNotification();
    cart=[]; save();
    $("#checkoutModal").classList.remove("open");
    $("#cartDrawer").classList.remove("open");
